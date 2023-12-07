@@ -1,0 +1,35 @@
+<mxfile host="Electron" modified="2023-11-14T09:41:01.219Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.0 Chrome/114.0.5735.289 Electron/25.8.3 Safari/537.36" etag="kfTaiwU3jZfkguc2qLGl" version="22.0.0" type="device">
+  <diagram name="Page-1" id="J2YKhIjwJ-g6nOdUoPry">
+    <mxGraphModel dx="1036" dy="605" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0MWPQLZZrj2iGW7hHurj-1" value="Broker A&lt;br style=&quot;font-size: 14px;&quot;&gt;- follower of partition" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="180" y="210" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0MWPQLZZrj2iGW7hHurj-4" value="Broker&amp;nbsp;&lt;br style=&quot;font-size: 15px;&quot;&gt;- leader of partition" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=15;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="330" y="70" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0MWPQLZZrj2iGW7hHurj-5" value="Broker A&lt;br style=&quot;font-size: 14px;&quot;&gt;- follower of partition" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="480" y="210" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0MWPQLZZrj2iGW7hHurj-6" style="rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.355;entryY=1.047;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;" edge="1" parent="1" source="0MWPQLZZrj2iGW7hHurj-1" target="0MWPQLZZrj2iGW7hHurj-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0MWPQLZZrj2iGW7hHurj-7" style="rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.667;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;" edge="1" parent="1" source="0MWPQLZZrj2iGW7hHurj-5" target="0MWPQLZZrj2iGW7hHurj-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0MWPQLZZrj2iGW7hHurj-9" value="I&#39;m at offset m&lt;br&gt;Give me n recors &lt;br style=&quot;font-size: 15px;&quot;&gt;from offset m+1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;fontFamily=Architects Daughter;fontStyle=1" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="520.0041717016372" y="189.99583759189215" as="geometry">
+            <mxPoint x="-10" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MWPQLZZrj2iGW7hHurj-10" value="I&#39;m at offset j&lt;br&gt;Give me k recors &lt;br style=&quot;font-size: 15px;&quot;&gt;from offset j+1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;fontFamily=Architects Daughter;fontStyle=1" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="330.00417170163723" y="189.99583759189215" as="geometry">
+            <mxPoint x="-10" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

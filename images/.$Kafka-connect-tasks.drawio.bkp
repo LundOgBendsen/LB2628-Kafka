@@ -1,0 +1,40 @@
+<mxfile host="Electron" modified="2023-11-28T20:30:33.155Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.0 Chrome/114.0.5735.289 Electron/25.8.3 Safari/537.36" etag="FLG8x5T4G618arr4PwRg" version="22.0.0" type="device">
+  <diagram name="Page-1" id="BJpdSmk83CWqqSpLcJw9">
+    <mxGraphModel dx="728" dy="442" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dn3sOyw9YDt-OpIm-WNB-1" value="Worker A" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=15;fontStyle=1;horizontal=1;verticalAlign=top;fillColor=#dae8fc;strokeColor=#6c8ebf;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
+          <mxGeometry x="330" y="130" width="130" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="dn3sOyw9YDt-OpIm-WNB-2" value="Connector A&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=15;fontStyle=1;horizontal=1;verticalAlign=top;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="345" y="160" width="100" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="dn3sOyw9YDt-OpIm-WNB-3" value="Task 1" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=15;fontStyle=1;horizontal=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="355" y="190" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dn3sOyw9YDt-OpIm-WNB-4" value="Task 2" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=15;fontStyle=1;horizontal=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="355" y="240" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dn3sOyw9YDt-OpIm-WNB-5" value="Worker B" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=15;fontStyle=1;horizontal=1;verticalAlign=top;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="490" y="130" width="130" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="dn3sOyw9YDt-OpIm-WNB-6" value="Connector A&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=15;fontStyle=1;horizontal=1;verticalAlign=top;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="505" y="160" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dn3sOyw9YDt-OpIm-WNB-7" value="Task 1" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=15;fontStyle=1;horizontal=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="515" y="190" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dn3sOyw9YDt-OpIm-WNB-9" value="Connector B" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=15;fontStyle=1;horizontal=1;verticalAlign=top;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="505" y="250" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dn3sOyw9YDt-OpIm-WNB-10" value="Task 1" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=15;fontStyle=1;horizontal=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="515" y="280" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dn3sOyw9YDt-OpIm-WNB-11" value="" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.http_protocol;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="380" y="305" width="35" height="35" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

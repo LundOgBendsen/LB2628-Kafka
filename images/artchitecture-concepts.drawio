@@ -1,0 +1,49 @@
+<mxfile host="Electron" modified="2023-11-02T12:24:05.144Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.0 Chrome/114.0.5735.289 Electron/25.8.3 Safari/537.36" etag="wxRhc8OpIwcORLyXeMvu" version="22.0.0" type="device">
+  <diagram name="Page-1" id="X8KTWwhp_YH_pVbdW5JT">
+    <mxGraphModel dx="796" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="yOyALNuVXexgKN4nQDvY-1" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="10" y="305" width="550" height="405" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-2" value="Performance" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=30;" parent="1" vertex="1">
+          <mxGeometry x="355" y="430" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-3" value="Reliability" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=15;" parent="1" vertex="1">
+          <mxGeometry x="310" y="570" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-4" value="Monoliths" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=-10;" parent="1" vertex="1">
+          <mxGeometry x="390" y="540" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-5" value="Cloud" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="320" y="520" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-6" value="Security" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=15;" parent="1" vertex="1">
+          <mxGeometry x="180" y="540" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-7" value="Fault tolerance" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=35;" parent="1" vertex="1">
+          <mxGeometry x="235" y="400" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-8" value="Scalability" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=-15;" parent="1" vertex="1">
+          <mxGeometry x="90" y="460" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-9" value="Resilience" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=20;" parent="1" vertex="1">
+          <mxGeometry x="95" y="570" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-11" value="Microservices" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=-15;" parent="1" vertex="1">
+          <mxGeometry x="200" y="610" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-12" value="Accessibility" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=-30;" parent="1" vertex="1">
+          <mxGeometry x="185" y="460" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-15" value="Availability" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=-15;" parent="1" vertex="1">
+          <mxGeometry x="135" y="390" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-16" value="Containerization" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=-15;" parent="1" vertex="1">
+          <mxGeometry x="260" y="480" width="170" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

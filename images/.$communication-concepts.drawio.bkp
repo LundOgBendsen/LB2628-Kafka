@@ -1,0 +1,52 @@
+<mxfile host="Electron" modified="2023-10-27T08:08:47.652Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.0 Chrome/114.0.5735.289 Electron/25.8.3 Safari/537.36" etag="2NLK7m7ZMW1seDndBiLn" version="22.0.0" type="device">
+  <diagram name="Page-1" id="X8KTWwhp_YH_pVbdW5JT">
+    <mxGraphModel dx="792" dy="1187" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="yOyALNuVXexgKN4nQDvY-1" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="10" y="305" width="550" height="405" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-2" value="EDA" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=30;" vertex="1" parent="1">
+          <mxGeometry x="400" y="430" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-3" value="Micro Services" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=15;" vertex="1" parent="1">
+          <mxGeometry x="275" y="570" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-4" value="Monoliths" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=-10;" vertex="1" parent="1">
+          <mxGeometry x="390" y="540" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-5" value="Cloud" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="344" y="520" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-6" value="Events" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=15;" vertex="1" parent="1">
+          <mxGeometry x="190" y="540" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-7" value="Fault tolerance" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=35;" vertex="1" parent="1">
+          <mxGeometry x="235" y="400" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-8" value="Scalability" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=-15;" vertex="1" parent="1">
+          <mxGeometry x="135" y="430" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-9" value="Resilience" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=20;" vertex="1" parent="1">
+          <mxGeometry x="95" y="570" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-11" value="CI/CD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=-15;" vertex="1" parent="1">
+          <mxGeometry x="240" y="610" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-12" value="SaaS" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=-30;" vertex="1" parent="1">
+          <mxGeometry x="220" y="460" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-13" value="PaaS" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=30;" vertex="1" parent="1">
+          <mxGeometry x="115" y="495" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-15" value="IaaS" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=-15;" vertex="1" parent="1">
+          <mxGeometry x="160" y="380" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yOyALNuVXexgKN4nQDvY-16" value="Containerization" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontStyle=1;rotation=-15;" vertex="1" parent="1">
+          <mxGeometry x="260" y="480" width="170" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
