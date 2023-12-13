@@ -2,68 +2,36 @@ In powershell navigate to the root of your c: drive by typing cd\
 Type: git clone https://github.com/LundOgBendsen/LB2628-Kafka.git
 
 
-
-/usr/bin/startKafka.sh
-
-#!/bin/bash -e
-
-# connector start command here.
-exec "/opt/kafka/bin/connect-standalone.sh" "/opt/kafka/config/connect-standalone.properties" "/opt/kafka/config/connect-file-source.properties" "/opt/kafka/config/connect-file-sink.properties"
-
-
-
-
-
 #Producer
 
-docker run -it --rm --network kafka_docker_example_net confluentinc/cp-kafka /bin/kafka-console-producer --bootstrap-server kafka1:9092,kafka2:9092 --topic mcl_topic --property parse.key=true --property key.separator=":"  --producer-property linger.ms=1000
+kafka-console-producer --topic my-topic --property parse.key=true --property key.separator=":"  --producer-property linger.ms=1000
 
-#Producer performance test
-
-docker run -it --rm --network kafka_docker_example_net confluentinc/cp-kafka /bin/kafka-producer-perf-test --topic mcl_topic --num-records 100 --record-size 2 --throughput 10 --producer-props bootstrap.servers=kafka1:9092 linger.ms=1000 batch.size=1000
+kafka-producer-perf-test --topic my-topic --num-records 100 --record-size 2 --throughput 10
 
 
 #Consumer 
 
-docker run -it --rm --network kafka_docker_example_net confluentinc/cp-kafka /bin/kafka-console-consumer --bootstrap-server kafka:9092 --topic test_topic -from-beginning
+kafka-console-consumer --topic my-topic --group my-group --from-beginning 
 
 docker run -it --rm --network kafka_docker_example_net confluentinc/cp-kafka /bin/kafka-console-consumer --bootstrap-server kafka1:9092 --topic mcl_topic -group mcl_group
 
+kafka-topics --topic my-topic -create --partitions 3 --replication-factor 2
 
-.\kafka-consumer.bat --topic streams-out-1 --from-beginning --property print.key=true --value-deserializer "org.apache.kafka.common.serialization.LongDeserializer"
+kafka-topics --list 
 
+kafka-topics --topic my-topic --delete 
 
-************ Topics ***********************
+kafka-topics --topic my-topic --describe
 
-# Create
-docker run -it --rm --network kafka_docker_example_net confluentinc/cp-kafka /bin/kafka-topics --bootstrap-server kafka:9092 --topic mcl_topic -create  --partitions 3 --replication-factor 2
-
-#List topics
-docker run -it --rm --network kafka_docker_example_net confluentinc/cp-kafka /bin/kafka-topics --bootstrap-server kafka:9092 --list 
-
-#Delete topic
-docker run -it --rm --network kafka_docker_example_net confluentinc/cp-kafka /bin/kafka-topics --bootstrap-server kafka:9092 --topic mcl_topic --delete 
-
-#Describe
-docker run -it --rm --network kafka_docker_example_net confluentinc/cp-kafka /bin/kafka-topics --bootstrap-server kafka1:9092 --topic mcl_topic --describe
-
-************ Consumer Groups ***********************
+#Consumer groups
 
 
-#List
-docker run -it --rm --network kafka_docker_example_net confluentinc/cp-kafka /bin/kafka-consumer-groups --bootstrap-server kafka1:9092 --list
+kafka-consumer-groups --list
+
+kafka-consumer-groups --describe --group my-group
 
 
-#Describe
-docker run -it --rm --network kafka_docker_example_net confluentinc/cp-kafka /bin/kafka-consumer-groups --bootstrap-server kafka1:9092 --describe --group mcl_group
+Invoke-WebRequest -Uri http://localhost:8083/connectors/ -Method POST -ContentType application/json  -InFile .\pg-source-config.json
 
-
-************ Configs ************************************
-
-.\kafka-configs.bat --entity-type topics --describe --all
-
-.\kafka-configs.bat --entity-type brokers --describe --all
-
-.\kafka-configs.bat --entity-type topics --entity-name streams-out-1 --add-config cleanup.policy=delete,compact --alter
-
-
+http://localhost:8083/connectors/{name}/status
+ 
