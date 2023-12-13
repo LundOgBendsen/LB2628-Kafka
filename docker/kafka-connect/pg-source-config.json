@@ -1,5 +1,5 @@
 {
-"name": "pg-orders-source",
+"name": "pg-customers-source",
 "config": {
 "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
 "database.hostname": "postgres",

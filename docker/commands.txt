@@ -14,9 +14,6 @@ exec "/opt/kafka/bin/connect-standalone.sh" "/opt/kafka/config/connect-standalon
 
 
 
-
-
-
 #Producer
 
 docker run -it --rm --network kafka_docker_example_net confluentinc/cp-kafka /bin/kafka-console-producer --bootstrap-server kafka1:9092,kafka2:9092 --topic mcl_topic --property parse.key=true --property key.separator=":"  --producer-property linger.ms=1000
