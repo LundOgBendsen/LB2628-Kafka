@@ -31,7 +31,7 @@ kafka-consumer-groups --list
 kafka-consumer-groups --describe --group my-group
 
 
-Invoke-WebRequest -Uri http://localhost:8083/connectors/ -Method POST -ContentType application/json  -InFile .\pg-source-config.json
+Invoke-WebRequest -Uri http://localhost:8083/connectors/ -Method POST -ContentType application/json -InFile .\pg-source-config.json -UseBasicParsing
 
 http://localhost:8083/connectors/{name}/status
  
