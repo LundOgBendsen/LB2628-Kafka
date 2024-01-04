@@ -1,19 +1,7 @@
 In powershell navigate to the root of your c: drive by typing cd\
 Type: git clone https://github.com/LundOgBendsen/LB2628-Kafka.git
 
-
-#Producer
-
-kafka-console-producer --topic my-topic --property parse.key=true --property key.separator=":"  --producer-property linger.ms=1000
-
-kafka-producer-perf-test --topic my-topic --num-records 100 --record-size 2 --throughput 10
-
-
-#Consumer 
-
-kafka-console-consumer --topic my-topic --group my-group --from-beginning 
-
-docker run -it --rm --network kafka_docker_example_net confluentinc/cp-kafka /bin/kafka-console-consumer --bootstrap-server kafka1:9092 --topic mcl_topic -group mcl_group
+#Topics
 
 kafka-topics --topic my-topic -create --partitions 3 --replication-factor 2
 
@@ -23,6 +11,21 @@ kafka-topics --topic my-topic --delete
 
 kafka-topics --topic my-topic --describe
 
+
+#Producer
+
+kafka-producer --topic my-topic --property parse.key=true --property key.separator=":" 
+
+kafka-producer-perf-test --topic my-topic --num-records 100 --record-size 2 --throughput 10
+
+
+#Consumer 
+
+kafka-consumer --topic my-topic --group my-group --from-beginning 
+
+
+
+
 #Consumer groups
 
 
@@ -30,6 +33,8 @@ kafka-consumer-groups --list
 
 kafka-consumer-groups --describe --group my-group
 
+
+#POST message
 
 Invoke-WebRequest -Uri http://localhost:8083/connectors/ -Method POST -ContentType application/json -InFile .\pg-source-config.json -UseBasicParsing
 
