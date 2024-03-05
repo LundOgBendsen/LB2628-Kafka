@@ -1,9 +1,14 @@
 package com.lb.kafkademo;
 
+import com.example.tutorial.protos.Hello;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.Producer;
+import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
@@ -14,6 +19,7 @@ import java.time.Duration;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 
 @SpringBootApplication
@@ -24,59 +30,29 @@ public class KafkaDemoApplication implements CommandLineRunner  {
 	}
 
 
-	@Value("${kafka.bootstrap.server}")
-	private String bootstrapServer;
-
-	@Value("${kafka.groupid}")
-	private String groupId;
-
-
 	@Override
 	public void run(String... args) throws Exception {
 
-		Map<String, Object> props = new HashMap<>();
-		props.put(
-				ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,
-				bootstrapServer);
-		props.put(
-				ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG,
-				StringDeserializer.class);
-		props.put(
-				ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,
-				StringDeserializer.class);
-
-		props.put(
-				ConsumerConfig.GROUP_ID_CONFIG,
-				groupId);
-
-		props.put(
-				ConsumerConfig.AUTO_OFFSET_RESET_CONFIG,
-				"earliest");
+		Properties props = new Properties();
+		props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:29092");
+		props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG,
+				"org.apache.kafka.common.serialization.StringSerializer");
+		props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,
+				"io.confluent.kafka.serializers.protobuf.KafkaProtobufSerializer");
+		props.put("schema.registry.url", "http://127.0.0.1:8085");
+		props.put("auto.register.schemas", false);
 
 
-		props.put(
-				ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG,
-				"true");
 
+		Producer<String, Hello.HelloWorld> producer = new KafkaProducer<String, Hello.HelloWorld>(props);
 
-		// create consumer
-		try (KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props)) {
+		Hello.HelloWorld message = Hello.HelloWorld.newBuilder()
+				.setMessage("Hello").build();
 
-			consumer.subscribe(Arrays.asList("demo-topic"));
-
-			// poll for new data
-			while (true) {
-				ConsumerRecords<String, String> records =
-						consumer.poll(Duration.ofMillis(100));
-
-				for (ConsumerRecord<String, String> record : records) {
-					System.out.printf("Key: %s, Value: %s, Partition: %s, Offset: %s\n",
-							record.key(), record.value(), record.partition(), record.offset());
-					// consumer.commitSync(Collections.singletonMap(new TopicPartition(record.topic(), record.partition()), new OffsetAndMetadata(record.offset() + 1)));
-
-				}
-			}
-		}
+		ProducerRecord<String, Hello.HelloWorld> record
+				= new ProducerRecord<String, Hello.HelloWorld>("proto-topic", "key", message);
+		producer.send(record).get();
+		producer.close();
 
 	}
 

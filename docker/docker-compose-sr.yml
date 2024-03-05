@@ -57,7 +57,7 @@ services:
       
   schemaregistry:
     container_name: schemaregistry
-    image: confluentinc/cp-schema-registry:5.1.2
+    image: confluentinc/cp-schema-registry:7.6.0
     restart: always
     depends_on:
       - zookeeper
@@ -65,5 +65,7 @@ services:
       SCHEMA_REGISTRY_KAFKASTORE_CONNECTION_URL: "zookeeper:2181"
       SCHEMA_REGISTRY_HOST_NAME: schemaregistry
       SCHEMA_REGISTRY_LISTENERS: "http://0.0.0.0:8085"
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: PLAINTEXT://kafka1:9092
+      SCHEMA_REGISTRY_DEBUG: 'true'
     ports:
       - 8085:8085
