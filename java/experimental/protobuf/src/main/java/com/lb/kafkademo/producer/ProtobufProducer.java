@@ -1,32 +1,22 @@
-package com.lb.kafkademo;
+package com.lb.kafkademo.producer;
 
 import com.example.tutorial.protos.Hello;
-import org.apache.kafka.clients.consumer.ConsumerConfig;
-import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.clients.consumer.ConsumerRecords;
-import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
-import org.apache.kafka.common.serialization.StringDeserializer;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.time.Duration;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Properties;
 
 
 @SpringBootApplication
-public class KafkaDemoApplication implements CommandLineRunner  {
+public class ProtobufProducer implements CommandLineRunner  {
 
 	public static void main(String[] args) {
-		SpringApplication.run(KafkaDemoApplication.class, args);
+		SpringApplication.run(ProtobufProducer.class, args);
 	}
 
 
@@ -40,7 +30,7 @@ public class KafkaDemoApplication implements CommandLineRunner  {
 		props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,
 				"io.confluent.kafka.serializers.protobuf.KafkaProtobufSerializer");
 		props.put("schema.registry.url", "http://127.0.0.1:8085");
-		props.put("auto.register.schemas", false);
+		props.put("auto.register.schemas", true);
 
 
 
@@ -50,7 +40,7 @@ public class KafkaDemoApplication implements CommandLineRunner  {
 				.setMessage("Hello").build();
 
 		ProducerRecord<String, Hello.HelloWorld> record
-				= new ProducerRecord<String, Hello.HelloWorld>("proto-topic", "key", message);
+				= new ProducerRecord<String, Hello.HelloWorld>("hello-topic", "key", message);
 		producer.send(record).get();
 		producer.close();
 
