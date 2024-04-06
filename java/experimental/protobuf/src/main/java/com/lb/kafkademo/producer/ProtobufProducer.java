@@ -30,14 +30,14 @@ public class ProtobufProducer implements CommandLineRunner  {
 		props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,
 				"io.confluent.kafka.serializers.protobuf.KafkaProtobufSerializer");
 		props.put("schema.registry.url", "http://127.0.0.1:8085");
-		props.put("auto.register.schemas", true);
+		props.put("auto.register.schemas", false);
 
 
 
 		Producer<String, Hello.HelloWorld> producer = new KafkaProducer<String, Hello.HelloWorld>(props);
 
 		Hello.HelloWorld message = Hello.HelloWorld.newBuilder()
-				.setMessage("Hello").build();
+				.setAge(10).build();
 
 		ProducerRecord<String, Hello.HelloWorld> record
 				= new ProducerRecord<String, Hello.HelloWorld>("hello-topic", "key", message);
