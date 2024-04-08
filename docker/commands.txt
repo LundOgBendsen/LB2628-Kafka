@@ -40,3 +40,12 @@ Invoke-WebRequest -Uri http://localhost:8083/connectors/ -Method POST -ContentTy
 
 http://localhost:8083/connectors/{name}/status
  
+ 
+ 
+# Schema registry
+http://localhost:8085/schemas
+
+mvn help:describe -Dplugin=schema-registry
+
+mvn schema-registry:test-compatibility
+
