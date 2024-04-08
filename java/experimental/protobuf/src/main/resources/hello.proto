@@ -1,7 +1,0 @@
-syntax = "proto3";
-
-option java_package = "com.example.tutorial.protos";
-
-message HelloWorld {
-  int32 age = 2;
-}

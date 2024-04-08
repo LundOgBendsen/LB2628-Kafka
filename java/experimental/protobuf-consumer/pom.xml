@@ -24,6 +24,13 @@
 		</repository>
 	</repositories>
 
+	<pluginRepositories>
+		<pluginRepository>
+			<id>confluent</id>
+			<url>https://packages.confluent.io/maven/</url>
+		</pluginRepository>
+	</pluginRepositories>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -46,6 +53,13 @@
 		<dependency>
 			<groupId>io.confluent</groupId>
 			<artifactId>kafka-protobuf-serializer</artifactId>
+			<version>7.6.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.confluent/kafka-schema-registry-maven-plugin -->
+		<dependency>
+			<groupId>io.confluent</groupId>
+			<artifactId>kafka-schema-registry-maven-plugin</artifactId>
 			<version>7.6.0</version>
 		</dependency>
 
@@ -72,13 +86,46 @@
                         <configuration>
                             <protocVersion>3.1.0</protocVersion>
                             <inputDirectories>
-                                <include>src/main/resources</include>
+                                <include>src/main/resources/downloaded</include>
                             </inputDirectories>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
-			
+
+
+			<plugin>
+				<groupId>io.confluent</groupId>
+				<artifactId>kafka-schema-registry-maven-plugin</artifactId>
+				<version>7.6.0</version>
+				<executions>
+					<execution>
+						<phase>initialize</phase>
+						<goals>
+							<goal>download</goal>
+						</goals>
+					</execution>
+				</executions>
+
+				<configuration>
+					<schemaRegistryUrls>
+						<param>http://127.0.0.1:8085</param>
+					</schemaRegistryUrls>
+					<outputDirectory>src/main/resources/downloaded</outputDirectory>
+					<subjects>
+					</subjects>
+					<subjectPatterns>
+						<pattern>hello-value</pattern>
+					</subjectPatterns>
+					<schemaTypes>
+						<hello-value>PROTOBUF</hello-value>
+					</schemaTypes>
+					<compatibilityLevels/>
+					<previousSchemaPaths/>
+					<schemas/>
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
 
