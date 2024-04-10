@@ -47,6 +47,8 @@ http://localhost:8085/schemas
 
 mvn help:describe -Dplugin=schema-registry
 
+mvn buildplan:list
+
 mvn schema-registry:test-compatibility
 
 
