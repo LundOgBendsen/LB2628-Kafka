@@ -1,0 +1,59 @@
+In powershell navigate to the root of your c: drive by typing cd\
+Type: git clone https://github.com/LundOgBendsen/LB2628-Kafka.git
+
+#Topics
+
+kafka-topics --topic my-topic -create --partitions 3 --replication-factor 2
+
+kafka-topics --list 
+
+kafka-topics --topic my-topic --delete 
+
+kafka-topics --topic my-topic --describe
+
+
+#Producer
+
+kafka-producer --topic my-topic --property parse.key=true --property key.separator=":" 
+
+kafka-producer-perf-test --topic my-topic --num-records 100 --record-size 2 --throughput 10
+
+
+#Consumer 
+
+kafka-consumer --topic my-topic --group my-group --from-beginning 
+
+
+
+
+#Consumer groups
+
+
+kafka-consumer-groups --list
+
+kafka-consumer-groups --describe --group my-group
+
+
+#POST message
+
+Invoke-WebRequest -Uri http://localhost:8083/connectors/ -Method POST -ContentType application/json -InFile .\pg-source-config.json -UseBasicParsing
+
+http://localhost:8083/connectors/{name}/status
+ 
+ 
+ 
+# Schema registry
+http://localhost:8085/schemas
+
+mvn help:describe -Dplugin=schema-registry
+
+mvn buildplan:list
+
+mvn schema-registry:test-compatibility
+
+
+#Download java
+https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.msi
+
+# Set JAVA_HOME
+C:\Program Files\Java\jdk-21
