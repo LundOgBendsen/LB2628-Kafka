@@ -1,6 +1,15 @@
 In powershell navigate to the root of your c: drive by typing cd\
 Type: git clone https://github.com/LundOgBendsen/LB2628-Kafka.git
 
+
+############
+Install podman
+
+podman machine init
+podman machine start
+podman ps
+
+
 #Topics
 
 kafka-topics --topic my-topic -create --partitions 3 --replication-factor 2
