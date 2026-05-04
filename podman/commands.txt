@@ -5,6 +5,10 @@ Type: git clone https://github.com/LundOgBendsen/LB2628-Kafka.git
 ############
 Install podman
 
+wsl --list --verbose
+wsl --shutdown
+
+
 podman machine init
 podman machine start
 podman ps
